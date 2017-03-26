@@ -33,7 +33,7 @@ int main() {
 		tmpImg = cvCreateImageHeader(cvSize(imgWidth, imgHeight), IPL_DEPTH_8U, 3);
 
 		// assign image address to IplImage data pointer
-		tmpImg->imageData = pMem;
+		tmpImg->imageData = capturedImage;
 
 		// create openCV Mat object with frame obtained form camera
 		cv::Mat image = cv::Mat(tmpImg,false);
